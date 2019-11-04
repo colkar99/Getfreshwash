@@ -60,12 +60,24 @@
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
-      <h3 class="title-d">Book carwash</h3>
+      <h3 class="title-d" id="dynamicPriceTag">Booking Price 400</h3>
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
       <form class="form-a" onsubmit="event.preventDefault(); bookingForm(event)">
         <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="carType">Car Type</label>
+              <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
+                onchange="carTypeChange(event)" required>
+                <option value="HATCHBACK">HATCHBACK</option>
+                <option value="SEDAN">SEDAN</option>
+                <option value="SUV">SUV</option>
+                <option value="LUXURY">LUXURY</option>
+              </select>
+            </div>
+          </div>
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label for="carModel">Select brand</label>
@@ -120,10 +132,11 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
-                <option value="OneTimeWash">One Time Wash</option>
-                <option value="Monthly">Monthly subscription</option>
-                <option value="Annual">Annual subscription</option>
+              <select name="washType" class="form-control form-control-lg form-control-a"
+               onchange="carTypeChange(event)"  id="washType" required>
+                <option value="basicWash">Basic Car Wash</option>
+                <option value="detailingWash">Detailing Car Wash</option>
+                <option value="deepWash">Deep Interial Wash</option>
               </select>
             </div>
           </div>
@@ -132,8 +145,8 @@
               <label for="houseType">House type</label>
               <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
                 <option value="Individual House">Individual House</option>
-                <option value="Below 2 floor apartments">Below 2 floor apartments</option>
-                <option value="Abouve 2 floor apartments">Abouve 2 floor apartments</option>
+                <option value="Below 2 floor apartments">2 Floor Apartments</option>
+                <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
               </select>
             </div>
           </div>
@@ -179,9 +192,9 @@
               Washes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="one-time-wash.html">One Time Wash</a>
-              <a class="dropdown-item" href="monthly.html">Subscribe Monthly</a>
-              <a class="dropdown-item" href="yearly.html">Subscribe yearly</a>
+              <a class="dropdown-item" href="basic-car-wash.html">Basic Car Wash</a>
+              <a class="dropdown-item" href="detailing-car-wash.html">Detailing Car Wash</a>
+              <a class="dropdown-item" href="deep-interial-cleaning.html">Deep Interial Wash</a>
               <!-- <a class="dropdown-item" href="agent-single.html">Agent Single</a> -->
             </div>
           </li>
@@ -226,39 +239,36 @@
   <!--/ Intro Single End /-->
 
   <!--/ Property Grid Star /-->
-  <section class="property-grid grid">
+  <section class="section-property section-t8">
     <div class="container">
       <div class="row">
-        <!-- <div class="col-sm-12">
-          <div class="grid-option">
-            <form>
-              <select class="custom-select">
-                <option selected>All</option>
-                <option value="1">New to Old</option>
-                <option value="2">For Rent</option>
-                <option value="3">For Sale</option>
-              </select>
-            </form>
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">Car wash types</h2>
+            </div>
           </div>
-        </div> -->
-        <div class="col-md-4">
+        </div>
+      </div>
+      <div id="property-carousel" class="owl-carousel owl-theme">
+        <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/freshwash/4-com.jpg" alt="one-time-wash" class="img-a img-fluid">
+              <img src="img/freshwash/4-com.jpg" alt="Basic-Car-Wash" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="one-time-wash.html">One time wash
+                    <a href="basic-car-wash.html">Basic Car Wash
                       <br />Door step service</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-450/only</span>
+                    <a href="/basic-car-wash.html"><span class="price-a">Offer price-450/only</span></a>
                   </div>
-                  <a href="one-time-wash.html" class="link-a">Click here to view
+                  <a href="basic-car-wash.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -288,24 +298,24 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/freshwash/5-com.jpg" alt="monthly" class="img-a img-fluid">
+              <img src="img/freshwash/5-com.jpg" alt="Detailing-car-wash" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="monthly.html">Monthly subscribe
-                      <br /> pay for 3 get 1 free</a>
+                    <a href="detailing-car-wash.html">Detailing Car Wash
+                      <br /></a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-1450/only</span>
+                    <a href="/detailing-car-wash.html"><span class="price-a">Offer Price-600/only</span></a>
                   </div>
-                  <a href="monthly.html" class="link-a">Click here to view
+                  <a href="detailing-car-wash.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -330,8 +340,8 @@
                       <span> <sup>Yes</sup></span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Total wash</h4>
-                      <span> <sup>4</sup></span>
+                      <h4 class="card-info-title">ALWT</h4>
+                      <span> <sup>Yes</sup></span>
                     </li>
                   </ul>
                 </div>
@@ -339,24 +349,24 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/freshwash/6-com.jpg" alt="yearly" class="img-a img-fluid">
+              <img src="img/freshwash/6-com.jpg" alt="Yearly-subscription" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="yearly.html">Annual Subscription
-                      <br /> 33% of total price!!</a>
+                    <a href="yearly.html">Deep Interial Cleaning
+                      <br />All service included </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-16000/only</span>
+                    <a href="/deep-interial-cleaning.html"><span class="price-a">Offer price-1650/only</span></a>
                   </div>
-                  <a href="yearly.html" class="link-a">Click here to view
+                  <a href="deep-interial-cleaning.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -381,8 +391,8 @@
                       <span> <sup>Yes</sup></span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Total wash</h4>
-                      <span> <sup>4/P-M</sup></span>
+                      <h4 class="card-info-title">Deep</h4>
+                      <span> <sup>Yes</sup></span>
                     </li>
                   </ul>
                 </div>
@@ -390,175 +400,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
-                  </div>
-                  <a href="one-time-wash.html" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property-8.jpg" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
-                  </div>
-                  <a href="one-time-wash.html" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a">
-              <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="#">204 Mount
-                      <br /> Olive Road Two</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">rent | $ 12.000</span>
-                  </div>
-                  <a href="one-time-wash.html" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Area</h4>
-                      <span>340m
-                        <sup>2</sup>
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Beds</h4>
-                      <span>2</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Baths</h4>
-                      <span>4</span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Garages</h4>
-                      <span>1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
-      <!-- <div class="row">
-        <div class="col-sm-12">
-          <nav class="pagination-a">
-            <ul class="pagination justify-content-end">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">
-                  <span class="ion-ios-arrow-back"></span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item next">
-                <a class="page-link" href="#">
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div> -->
     </div>
   </section>
   <!--/ Property Grid End /-->

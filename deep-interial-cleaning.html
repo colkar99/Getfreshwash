@@ -72,7 +72,8 @@
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label for="carType">Car Type</label>
-              <select name="carType" class="form-control form-control-lg form-control-a" id="carType" required>
+              <select name="carType" class="form-control form-control-lg form-control-a" 
+              onchange="carTypeChange(event)"  id="carType" required>
                 <option value="HATCHBACK">HATCHBACK</option>
                 <option value="SEDAN">SEDAN</option>
                 <option value="SUV">SUV</option>
@@ -84,7 +85,7 @@
             <div class="form-group">
               <label for="carModel">Select brand</label>
               <select name="carModel" class="form-control form-control-lg form-control-a" id="carModel"
-                onchange="myFunction(event)" required>
+                 required>
                 <option value="Maruthi">Maruthi suzuki</option>
                 <option value="Nissan">Nissan</option>
                 <option value="Dusun">Dutsun</option>
@@ -134,10 +135,11 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
+              <select name="washType" class="form-control form-control-lg form-control-a"
+              onchange="carTypeChange(event)"  id="washType" required>
                 <option value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
-                <option selected value="deepInterialWash">Deep Interial Wash</option>
+                <option selected value="deepWash">Deep Interial Wash</option>
               </select>
             </div>
           </div>

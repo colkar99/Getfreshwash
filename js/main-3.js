@@ -231,24 +231,66 @@ function booknowButtons() {
 function carTypeChange() {
 	debugger
 	let val = document.getElementById('carType').value;
+	let washType = document.getElementById('washType').value;
 	let priceTag = document.getElementById('dynamicPriceTag');
 	let price = 0;
-	switch (val) {
-		case 'HATCHBACK':
-			price = 400;
-			priceTag.innerHTML = `Booking Price 400`
-			break;
-		case 'SEDAN':
-			price = 450;
-			priceTag.innerHTML = `Booking Price 450`
-			break;
-		case 'SUV':
-			price = 450;
-			priceTag.innerHTML = `Booking Price 450`
-			break;
-		case 'LUXURY':
-			price = 800;
-			priceTag.innerHTML = `Booking Price 800`
-			break;
+	if(val ==="HATCHBACK" && washType === "basicWash"){
+		priceTag.innerHTML = `Booking Price 400`;
 	}
+	if(val ==="HATCHBACK" && washType === "detailingWash"){
+		priceTag.innerHTML = `Booking Price 600`;
+	}
+	if(val ==="HATCHBACK" && washType === "deepWash"){
+		priceTag.innerHTML = `Booking Price 1650`;
+	}
+	if(val ==="SEDAN" && washType === "basicWash"){
+		priceTag.innerHTML = `Booking Price 450`;
+	}
+	if(val ==="SEDAN" && washType === "detailingWash"){
+		priceTag.innerHTML = `Booking Price 650`;
+	}
+	if(val ==="SEDAN" && washType === "deepWash"){
+		priceTag.innerHTML = `Booking Price 1750`;
+	}
+
+	if(val ==="SUV" && washType === "basicWash"){
+		priceTag.innerHTML = `Booking Price 450`;
+	}
+	if(val ==="SUV" && washType === "detailingWash"){
+		priceTag.innerHTML = `Booking Price 650`;
+	}
+	if(val ==="SUV" && washType === "deepWash"){
+		priceTag.innerHTML = `Booking Price 1750`;
+	}
+
+	if(val ==="LUXURY" && washType === "basicWash"){
+		priceTag.innerHTML = `Booking Price 800`;
+	}
+	if(val ==="LUXURY" && washType === "detailingWash"){
+		priceTag.innerHTML = `Booking Price 1000`;
+	}
+	if(val ==="LUXURY" && washType === "deepWash"){
+		priceTag.innerHTML = `Booking Price 2500`;
+	}
+
+	// switch (val) {
+	// 	case 'HATCHBACK':
+	// 		price = 400;
+	// 		priceTag.innerHTML = `Booking Price 400`
+	// 		break;
+	// 	case 'SEDAN':
+	// 		price = 450;
+	// 		priceTag.innerHTML = `Booking Price 450`
+	// 		break;
+	// 	case 'SUV':
+	// 		price = 450;
+	// 		priceTag.innerHTML = `Booking Price 450`
+	// 		break;
+	// 	case 'LUXURY':
+	// 		price = 800;
+	// 		priceTag.innerHTML = `Booking Price 800`
+	// 		break;
+	// }
 }
+
+carTypeChange();

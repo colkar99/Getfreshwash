@@ -132,14 +132,15 @@
               <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
                 <option value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
-                <option value="Annual">Annual subscription</option>
+                <option value="deepWash">Deep Interial Wash</option>
               </select>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="houseType">House type</label>
-              <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
+              <select name="houseType" class="form-control form-control-lg form-control-a" 
+              onchange="carTypeChange(event)"  id="houseType" required>
                 <option value="Individual House">Individual House</option>
                 <option value="Below 2 floor apartments">2 Floor Apartments</option>
                 <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>

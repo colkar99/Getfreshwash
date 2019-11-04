@@ -60,12 +60,24 @@
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
-      <h3 class="title-d">Book carwash</h3>
+      <h3 class="title-d" id="dynamicPriceTag">Booking Price 400</h3>
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
       <form class="form-a" onsubmit="event.preventDefault(); bookingForm(event)">
         <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="carType">Car Type</label>
+              <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
+                onchange="carTypeChange(event)" required>
+                <option value="HATCHBACK">HATCHBACK</option>
+                <option value="SEDAN">SEDAN</option>
+                <option value="SUV">SUV</option>
+                <option value="LUXURY">LUXURY</option>
+              </select>
+            </div>
+          </div>
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label for="carModel">Select brand</label>
@@ -120,10 +132,11 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
-                <option value="OneTimeWash">One Time Wash</option>
-                <option value="Monthly">Monthly subscription</option>
-                <option value="Annual">Annual subscription</option>
+              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" 
+              onchange="carTypeChange(event)" required>
+                <option value="basicWash">Basic Car Wash</option>
+                <option value="detailingWash">Detailing Car Wash</option>
+                <option value="deepWash">Deep Interial Wash</option>
               </select>
             </div>
           </div>
@@ -132,8 +145,8 @@
               <label for="houseType">House type</label>
               <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
                 <option value="Individual House">Individual House</option>
-                <option value="Below 2 floor apartments">Below 2 floor apartments</option>
-                <option value="Abouve 2 floor apartments">Abouve 2 floor apartments</option>
+                <option value="Below 2 floor apartments">2 Floor Apartments</option>
+                <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
               </select>
             </div>
           </div>
@@ -179,9 +192,9 @@
               Washes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="one-time-wash.html">One Time Wash</a>
-              <a class="dropdown-item" href="monthly.html">Subscribe Monthly</a>
-              <a class="dropdown-item" href="yearly.html">Subscribe yearly</a>
+              <a class="dropdown-item" href="basic-car-wash.html">Basic Wash Car</a>
+              <a class="dropdown-item" href="detailing-car-wash.html">Detailing Car Wash</a>
+              <a class="dropdown-item" href="deep-interial-cleaning.html">Deep Interial Wash</a>
             </div>
           </li>
           <li class="nav-item">
@@ -312,7 +325,7 @@
                   </div>
                   <div class="icon-box-content">
                     <p class="mb-1">Email.
-                      <span class="color-a">support@ezclean.co.in</span>
+                      <span class="color-a">ezclean.leadgen@gmail.com</span>
                     </p>
                     <p class="mb-1">Phone.
                       <span class="color-a">+91 8056756218</span>
