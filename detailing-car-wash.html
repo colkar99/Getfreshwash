@@ -3,21 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Yearly - Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me</title>
+  <title>Detailing - Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="keywords" content="Yearly - ezclean.co.in,www.ezclean.co.in, EzClean, Online car wash, online car wash trichy, carwash trichy online, steam wash, foam car wash trichy, car wash liquid, free car wash in trichy, best car wash in trichy, car wash at door step trichy, maruthi car wash, auto wash, bike wash, bus wash in trichy , best car wash in trichy, cheapest car wash in trichy">
-  <meta name="description" content="Yearly - ezclean.co.in: car wash online in trichy -Need More Information About Car Wash # Please Visit the homepage Visit Homepage About Avtodock Avtodock car wash in chennai. For droves of car owners, the mobile steam car wash facility is like a pipe dream.The main vision of AVTODOCK’S Doorstep car wash in chennai is to change the mindset of the customers about doorstep washing. …">
-  <link rel="canonical" href="https://ezclean.co.in/yearly">
-  <meta property="og:title" content="Yearly - Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me">
+  <meta name="keywords"
+    content="Detailing - ezclean.co.in,www.ezclean.co.in, EzClean, Online car wash, online car wash trichy, carwash trichy online, steam wash, foam car wash trichy, car wash liquid, free car wash in trichy, best car wash in trichy, car wash at door step trichy, maruthi car wash, auto wash, bike wash, bus wash in trichy , best car wash in trichy, cheapest car wash in trichy">
+  <meta name="description"
+    content="Detailing - ezclean.co.in: car wash online in trichy -Need More Information About Car Wash # Please Visit the homepage Visit Homepage About Avtodock Avtodock car wash in chennai. For droves of car owners, the mobile steam car wash facility is like a pipe dream.The main vision of AVTODOCK’S Doorstep car wash in chennai is to change the mindset of the customers about doorstep washing. …">
+  <link rel="canonical" href="https://ezclean.co.in/detailing-car-wash">
+  <meta property="og:title" content="Detailing - Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me">
   <meta property="og:url" content="https://ezclean.co.in">
   <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Yearly - Car wash Trichy, Doorstep car wash Trichy, Steam, Interior, Price">
+  <meta property="og:site_name" content="Detailing - Car wash Trichy, Doorstep car wash Trichy, Steam, Interior, Price">
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://portfolio-karthik.s3.ap-south-1.amazonaws.com/freshwash/sharing.jpg">
-  <meta property="og:description" content="Yearly - ezclean.co.in: car wash online in trichy -Need More Information About Car Wash # Please Visit the homepage Visit Homepage About Avtodock Avtodock car wash in chennai. For droves of car owners, the mobile steam car wash facility is like a pipe dream.The main vision of AVTODOCK’S Doorstep car wash in chennai is to change the mindset of the customers about doorstep washing. …">
+  <meta property="og:description"
+    content="Detailing - ezclean.co.in: car wash online in trichy -Need More Information About Car Wash # Please Visit the homepage Visit Homepage About Avtodock Avtodock car wash in chennai. For droves of car owners, the mobile steam car wash facility is like a pipe dream.The main vision of AVTODOCK’S Doorstep car wash in chennai is to change the mindset of the customers about doorstep washing. …">
   <!-- Favicons -->
-  <!-- <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -57,7 +58,7 @@
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
-      <h3 class="title-d">Book carwash</h3>
+      <h3 class="title-d" id="dynamicPriceTag">Booking Price 600</h3>
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
@@ -65,9 +66,21 @@
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
+              <label for="carType">Car Type</label>
+              <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
+                onchange="carTypeChange(event)" required>
+                <option value="HATCHBACK">HATCHBACK</option>
+                <option value="SEDAN">SEDAN</option>
+                <option value="SUV">SUV</option>
+                <option value="LUXURY">LUXURY</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
               <label for="carModel">Select brand</label>
-              <select name="carModel" class="form-control form-control-lg form-control-a" id="carModel" onchange="myFunction(event)"
-                required>
+              <select name="carModel" class="form-control form-control-lg form-control-a" id="carModel"
+                onchange="myFunction(event)" required>
                 <option value="Maruthi">Maruthi suzuki</option>
                 <option value="Nissan">Nissan</option>
                 <option value="Dusun">Dutsun</option>
@@ -118,8 +131,8 @@
             <div class="form-group">
               <label for="washType">Wash type</label>
               <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
-                <option value="OneTimeWash">One Time Wash</option>
-                <option value="Monthly">Monthly subscription</option>
+                <option value="basicWash">Basic Car Wash</option>
+                <option value="detailingWash">Detailing Car Wash</option>
                 <option value="Annual">Annual subscription</option>
               </select>
             </div>
@@ -129,8 +142,8 @@
               <label for="houseType">House type</label>
               <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
                 <option value="Individual House">Individual House</option>
-                <option value="Below 2 floor apartments">Below 2 floor apartments</option>
-                <option value="Abouve 2 floor apartments">Abouve 2 floor apartments</option>
+                <option value="Below 2 floor apartments">2 Floor Apartments</option>
+                <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
               </select>
             </div>
           </div>
@@ -153,7 +166,6 @@
         <span></span>
       </button>
       <a class="navbar-brand text-brand" href="/">Ez<span class="color-b">Clean</span></a>
-
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-address-book" aria-hidden="true"></span>
@@ -169,15 +181,16 @@
           <li class="nav-item">
             <a class="nav-link" href="services.html">Services</a>
           </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Washes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item " href="one-time-wash.html">One time wash</a>
-              <a class="dropdown-item " href="monthly.html">Subscribe Monthly</a>
-              <a class="dropdown-item active" href="yearly.html">Subscribe yearly</a>
+              <a class="dropdown-item " href="basic-car-wash.html">Basic Car Wash</a>
+              <a class="dropdown-item active" href="detailing-car-wash.html">Detailing Car Wash</a>
+              <a class="dropdown-item" href="yearly.html">Subscribe yearly</a>
             </div>
           </li>
           <li class="nav-item">
@@ -199,7 +212,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Yearly Subscribe</h1>
+            <h1 class="title-single">Detailing Car Wash</h1>
             <span class="color-text-a">Trichy, Tamilnadu</span>
           </div>
         </div>
@@ -210,10 +223,10 @@
                 <a href="/">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="/yearly.html">Wash types</a>
+                <a href="/detailing-car-wash.html">Services</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Yearly Subscribe
+                Detailing Car Wash
               </li>
             </ol>
           </nav>
@@ -230,8 +243,9 @@
         <div class="col-sm-12">
           <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
             <div class="carousel-item-b">
-              <img src="img/freshwash/9-com.jpg" alt="Car Wash">
+              <img src="img/freshwash/7-com.jpg" alt="Car-Wash">
             </div>
+
           </div>
           <div class="row justify-content-between">
             <div class="col-md-5 col-lg-4">
@@ -241,7 +255,7 @@
                     <span class="ion-money">&#8377</span>
                   </div>
                   <div class="card-title-c align-self-center">
-                    <h5 class="title-c">Original price-<strike>21600</strike> Offer price-16000/-</h5>
+                    <h5 class="title-c">Original price-<strike>750/</strike><br>Offer price-600/only</h5>
                   </div>
                 </div>
               </div>
@@ -282,20 +296,24 @@
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
+                      <strong>Dashboard cleaning and polishing</strong>
+                      <span>
+                        Yes
+                      </span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <strong>Tires and alloy wheels treatment</strong>
+                      <span>
+                        Yes
+                      </span>
+                    </li>
+                    <!-- <li class="d-flex justify-content-between">
                       <strong>Wash count:</strong>
                       <span>4 /per month</span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Interial:</strong>
                       <span>1 /per month</span>
-                    </li>
-                    <!-- <li class="d-flex justify-content-between">
-                      <strong>Baths:</strong>
-                      <span>2</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Garage:</strong>
-                      <span>1</span>
                     </li> -->
                   </ul>
                 </div>
@@ -311,20 +329,19 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  Yearly subscription are the great plan for the car holders. By doing yearly subscription you can save
-                  upto 25% on your annual bill. For monthly subscriber we are doing 4 washes at the cost of 3 washes.
-                  This package also include 1 interial wash for a month. And also we have great referal plan . By
-                  refering 2 cars and pay &#8377.15000/- for a year. By using referal plan you can get upto 30%
-                  discount
-                  on your annual plan.
-                  Hurry up this is limited period offer.
-                  We only user micro-fiber cloths to avoid scratches on your beautifull car. Finally we do wax
-                  polish(Totally customer option). Dont search for water wash just login and register your convinient
-                  time . We will take care of all other stuffs. Pay after the completion of work.
+                  What’s the first thing that comes to your mind for “Car Wash” ? A guy washing and scrubbing your car
+                  with shampoo and a dirty rug ? NO! EzClean Car Wash does more than just washing your car and providing
+                  a shine. We focus on quality car detailing and efficiency no matter how big or small the job is. Thats
+                  makes you come next time. Our car wash professionals are equipped with the right tools and cleaning
+                  agents. We also offer the best doorstep car wash in Trichy. It saves you time and the hassle of having
+                  to drive your car to our garage. Just provide our car wash professionals a few litres of water then
+                  stand back and watch your car getting transformed like a shiny brand new car. Whether you own a
+                  hatchback, sedan, SUV or a luxury car, we provide the best car wash in Trichy.
                 </p>
-                <p class="description color-text-a no-margin">
-                  Refer 2 cars and get upto 30% offer on your annual bill..! Hurry up limited period offer.
-                </p>
+                <button class="btn btn-warning" type="button" onclick="booknowButtons()">Book Now</button>
+                <!-- <p class="description color-text-a no-margin">
+                  Refer 2 cars and get 2 wash totally free at the cost of &#8377.1000/per month..!
+                </p> -->
               </div>
               <div class="row section-t3">
                 <div class="col-sm-12">
@@ -335,18 +352,18 @@
               </div>
               <div class="amenities-list color-text-a">
                 <ul class="list-a no-margin">
-                  <li>Body wash</li>
-                  <li>Tyres and chases</li>
-                  <li>Windshield cleaning</li>
-                  <li>Basic interial</li>
-                  <li>Foam/liquid</li>
-                  <li>Water jet</li>
-                  <li>High pressure vaccum</li>
-                  <li>Wax polish</li>
-                  <li>Referal program</li>
-                  <li>4 Washs per month</li>
-                  <li>1 Interial wash per month</li>
-                  <!-- <li>Concrete Flooring</li> -->
+                  <li>Seats and Boot</li>
+                  <li>Washing and cleaning of foot mats</li>
+                  <li>Body Shampooing and washing.</li>
+                  <li>Washing Door Frames</li>
+                  <li>Tyre arches cleaning</li>
+                  <li>Underbody wash</li>
+                  <li> Engine hot water wash and dressing</li>
+                  <li>Side doors cleaning</li>
+                  <li>Dash board cleaning and polishing</li>
+                  <li>Dash board cleaning and polishing</li>
+                  <li>Car perfume spray</li>
+                  <li>Tires and alloy wheels treatment</li>
                 </ul>
               </div>
             </div>
@@ -358,31 +375,15 @@
               <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab"
                 aria-controls="pills-video" aria-selected="true">Video</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" id="pills-plans-tab" data-toggle="pill" href="#pills-plans" role="tab"
-                aria-controls="pills-plans" aria-selected="false">Floor Plans</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab"
-                aria-controls="pills-map" aria-selected="false">Ubication</a>
-            </li> -->
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
               <iframe src="https://www.youtube.com/embed/K3MWF-KRcjw" width="100%" height="460" frameborder="0"
                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <!-- <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
-              <img src="img/plan2.jpg" alt="" class="img-fluid">
-            </div>
-            <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834"
-                width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div> -->
           </div>
         </div>
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
           <div class="row section-t3">
             <div class="col-sm-12">
               <div class="title-box-d">
@@ -391,9 +392,6 @@
             </div>
           </div>
           <div class="row">
-            <!-- <div class="col-md-6 col-lg-4">
-              <img src="img/agent-4.jpg" alt="" class="img-fluid">
-            </div> -->
             <div class="col-md-6 col-lg-6">
               <div class="property-agent">
                 <h4 class="title-agent">Ezclean inc</h4>
@@ -414,10 +412,6 @@
                     <strong>Email:</strong>
                     <span class="color-text-a">support@ezclean.co.in</span>
                   </li>
-                  <!-- <li class="d-flex justify-content-between">
-                    <strong>Skype:</strong>
-                    <span class="color-text-a">Annabela.ge</span>
-                  </li> -->
                 </ul>
                 <div class="socials-a">
                   <ul class="list-inline">
@@ -480,7 +474,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -492,46 +486,46 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="/about.html">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="/services.html">Services</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
+                <a href="/basic-car-wash.html">Basic Wash</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="/contact.html">Contact</a>
               </li>
             </ul>
           </nav>
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-pinterest-p" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-dribbble" aria-hidden="true"></i>
                 </a>
               </li>

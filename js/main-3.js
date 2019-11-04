@@ -1,29 +1,29 @@
 (function ($) {
-  "use strict";
-  
-  // Preloader
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
-	}
+	"use strict";
 
-  });
+	// Preloader
+	$(window).on('load', function () {
+		if ($('#preloader').length) {
+			$('#preloader').delay(100).fadeOut('slow', function () {
+				$(this).remove();
+			});
+		}
 
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
-  
+	});
+
+	// Back to top button
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn('slow');
+		} else {
+			$('.back-to-top').fadeOut('slow');
+		}
+	});
+	$('.back-to-top').click(function () {
+		$('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+		return false;
+	});
+
 	var nav = $('nav');
 	var navHeight = nav.outerHeight();
 
@@ -104,7 +104,7 @@
 	/*--/ Property owl owl /--*/
 	$('#property-single-carousel').owlCarousel({
 		loop: true,
-		margin: 0,  
+		margin: 0,
 		nav: true,
 		navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
 		responsive: {
@@ -119,7 +119,7 @@
 		loop: true,
 		margin: 30,
 		responsive: {
-			0: {  
+			0: {
 				items: 1,
 			},
 			769: {
@@ -149,28 +149,28 @@
 	});
 
 })(jQuery);
-var maruthi = [{id:0,value:"Dezire"},{id:1,value:"swift"},{id:1,value:"alto"}];
-var nissan = [{id:0,value:"active"},{id:1,value:"micro"},{id:1,value:"duster"}]; 
-var dutsun = [{id:0,value:"Ready go"},{id:1,value:"Ready go +"},{id:1,value:"Test"}]; 
-function myFunction(event){
+var maruthi = [{ id: 0, value: "Dezire" }, { id: 1, value: "swift" }, { id: 1, value: "alto" }];
+var nissan = [{ id: 0, value: "active" }, { id: 1, value: "micro" }, { id: 1, value: "duster" }];
+var dutsun = [{ id: 0, value: "Ready go" }, { id: 1, value: "Ready go +" }, { id: 1, value: "Test" }];
+function myFunction(event) {
 	debugger
-	let options; 
-	if(event.target.value === "Maruthi"){
+	let options;
+	if (event.target.value === "Maruthi") {
 		options = maruthi;
 	}
-	else if(event.target.value === "Nissan"){
+	else if (event.target.value === "Nissan") {
 		options = nissan;
 	}
-	else if(event.target.value === "Dutsun"){
+	else if (event.target.value === "Dutsun") {
 		options = dutsun;
 	}
 
 	loadDropdown(options)
 }
-function loadDropdown(options){
-	var select = document.getElementById("carVariety"); 
+function loadDropdown(options) {
+	var select = document.getElementById("carVariety");
 	select.innerHTML = null;
-	for(let option of options){
+	for (let option of options) {
 		var opt = option.value;
 		var el = document.createElement("option");
 		el.textContent = opt;
@@ -178,37 +178,37 @@ function loadDropdown(options){
 		select.appendChild(el);
 	}
 }
-function bookingForm(event){
+function bookingForm(event) {
 	debugger
 	let obj = loadFormValue();
 	console.log(obj);
 	$.ajax({
 		headers: {
-			'Access-Control-Allow-Origin':'*',
-			'Content-Type':'application/json'
+			'Access-Control-Allow-Origin': '*',
+			'Content-Type': 'application/json'
 		},
 		url: "https://api.ezclean.co.in/api/order/web-order",
 		type: "post",
 		data: JSON.stringify(obj),
-		success: function(d) {
+		success: function (d) {
 			console.log(d)
 		},
-		error: function(d){
+		error: function (d) {
 			console.log(d);
 		}
-		
-		
+
+
 	});
 	var element = document.getElementById("body");
-	element.setAttribute('class',"box-collapse-closed");
- 	// element.class = "close-box-collapse right-boxed ion-ios-close";
+	element.setAttribute('class', "box-collapse-closed");
+	// element.class = "close-box-collapse right-boxed ion-ios-close";
 	// element.click();
-  
+
 
 }
-function loadFormValue(){
+function loadFormValue() {
 	let params = (new URL(document.location)).searchParams;
-	let obj = {preferDateTime:{}};
+	let obj = { preferDateTime: {} };
 	obj['carModel'] = document.getElementById('carModel').value;
 	obj['carVariety'] = document.getElementById('carVariety').value;
 	obj.preferDateTime['preferDate'] = document.getElementById('preferDate').value;
@@ -223,3 +223,32 @@ function loadFormValue(){
 	return obj;
 }
 loadDropdown(maruthi);
+
+function booknowButtons() {
+	var element = document.getElementById("body");
+	element.setAttribute('class', "box-collapse-open");
+}
+function carTypeChange() {
+	debugger
+	let val = document.getElementById('carType').value;
+	let priceTag = document.getElementById('dynamicPriceTag');
+	let price = 0;
+	switch (val) {
+		case 'HATCHBACK':
+			price = 400;
+			priceTag.innerHTML = `Booking Price 400`
+			break;
+		case 'SEDAN':
+			price = 450;
+			priceTag.innerHTML = `Booking Price 450`
+			break;
+		case 'SUV':
+			price = 450;
+			priceTag.innerHTML = `Booking Price 450`
+			break;
+		case 'LUXURY':
+			price = 800;
+			priceTag.innerHTML = `Booking Price 800`
+			break;
+	}
+}

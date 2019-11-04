@@ -3,17 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me</title>
+  <title>Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me | Steam Car Wash</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="keywords" content="ezclean.co.in,www.ezclean.co.in, ezclean, Online car wash, online car wash trichy, carwash trichy online, steam wash, foam car wash trichy, car wash liquid, free car wash in trichy, best car wash in trichy, car wash at door step trichy, maruthi car wash, auto wash, bike wash, bus wash in trichy , best car wash in trichy, cheapest car wash in trichy">
-  <meta name="description" content="ezclean.co.in: car wash doorsteo in Trichy - maruti, hyundai, honda, tata, mahindra, renault , ford, nissan, datsun, toyota, mg, kia. Free car wash & Cash on Delivery Available, Best Car Wash Near Me Services.Steam and mobile water wash low Price">
+  <meta name="keywords"
+    content="ezclean.co.in,www.ezclean.co.in, ezclean, Doorstep car wash trichy, online car wash trichy, carwash trichy, Steam Car Wash Trichy, Foam Car Wash Trichy, Car Wash Liquid, Free car wash in trichy, best car wash in trichy, Car Wash at Doorstep Trichy,Best Car Wash Near Me, auto wash, bike wash, bus wash in trichy, cheapest car wash in trichy">
+  <meta name="description"
+    content="ezclean.co.in: car wash doorstep in Trichy - maruti, hyundai, honda, tata, mahindra, renault , ford, nissan, datsun, toyota, mg, kia. Free car wash & Cash on Delivery Available, Best Car Wash Near Me Services.Steam and mobile water wash low Price">
   <link rel="canonical" href="https://ezclean.co.in">
   <meta property="og:title" content="EzClean - Car wash Trichy, Doorstep car wash Trichy, Best water Wash Near Me">
   <meta property="og:url" content="https://ezclean.co.in">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Car wash Trichy, Doorstep car wash Trichy, Steam, Interior, Price">
   <meta property="og:image" content="https://portfolio-karthik.s3.ap-south-1.amazonaws.com/freshwash/sharing.jpg">
-  <meta property="og:description" content="ezclean.co.in: car wash doorsteo in Trichy - maruti, hyundai, honda, tata, mahindra, renault , ford, nissan, datsun, toyota, mg, kia. Free car wash & Cash on Delivery Available, Best Car Wash Near Me Services.Steam and mobile water wash low Price">
+  <meta property="og:description"
+    content="ezclean.co.in: car wash doorsteo in Trichy - maruti, hyundai, honda, tata, mahindra, renault , ford, nissan, datsun, toyota, mg, kia. Free car wash & Cash on Delivery Available, Best Car Wash Near Me Services.Steam and mobile water wash low Price">
   <!-- Favicons -->
 
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -54,7 +57,7 @@
   <!--/ Form Search Star /-->
   <div class="box-collapse">
     <div class="title-box-d">
-      <h3 class="title-d">Book carwash</h3>
+      <h3 class="title-d" id="dynamicPriceTag">Booking Price 400</h3>
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
@@ -62,9 +65,21 @@
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
+              <label for="carType">Car Type</label>
+              <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
+                onchange="carTypeChange(event)" required>
+                <option value="HATCHBACK">HATCHBACK</option>
+                <option value="SEDAN">SEDAN</option>
+                <option value="SUV">SUV</option>
+                <option value="LUXURY">LUXURY</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
               <label for="carModel">Select brand</label>
-              <select name="carModel" class="form-control form-control-lg form-control-a" id="carModel" onchange="myFunction(event)"
-                required>
+              <select name="carModel" class="form-control form-control-lg form-control-a" id="carModel"
+                onchange="myFunction(event)" required>
                 <option value="Maruthi">Maruthi suzuki</option>
                 <option value="Nissan">Nissan</option>
                 <option value="Dusun">Dutsun</option>
@@ -115,8 +130,8 @@
             <div class="form-group">
               <label for="washType">Wash type</label>
               <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
-                <option value="OneTimeWash">One Time Wash</option>
-                <option value="Monthly">Monthly subscription</option>
+                <option value="basicWash">Basic Car Wash</option>
+                <option value="detailingWash">Detailing Car Wash</option>
                 <option value="Annual">Annual subscription</option>
               </select>
             </div>
@@ -126,8 +141,8 @@
               <label for="houseType">House type</label>
               <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
                 <option value="Individual House">Individual House</option>
-                <option value="Below 2 floor apartments">Below 2 floor apartments</option>
-                <option value="Abouve 2 floor apartments">Abouve 2 floor apartments</option>
+                <option value="Below 2 floor apartments">2 Floor Apartments</option>
+                <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
               </select>
             </div>
           </div>
@@ -174,9 +189,9 @@
               Washes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="one-time-wash.html">One Time Wash</a>
-              <a class="dropdown-item" href="monthly.html">Subscribe Monthly</a>
-              <a class="dropdown-item" href="yearly.html">Subscribe yearly</a>
+              <a class="dropdown-item" href="basic-car-wash.html">Basic Car Wash</a>
+              <a class="dropdown-item" href="detailing-car-wash.html">Detailing Car Wash</a>
+              <a class="dropdown-item" href="deep-interial-cleaning.html">Deep Interial Cleaning</a>
             </div>
           </li>
           <li class="nav-item">
@@ -203,13 +218,16 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">One Time Wash, Trichy
+                    <p class="intro-title-top">Basic Car Wash, Trichy
                       <br>We love to serve your car!</p>
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">Entire body wash + </span> Basic internal wash
-                      <br>Free!! Wax polish for the First time user!</h1>
+                      <span class="color-b">Complete vacuuming of cars incl. seats and boot + </span> Washing and
+                      cleaning of foot mats
+                      <br> Body Shampooing and washing including door frames + Tyre arches cleaning + Underbody wash +
+                      Engine hot water wash and dressing + Side doors cleaning + Dash board polishing + Car perfume
+                      spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="one-time-wash.html"><span class="price-a">Offer price-450/only!</span></a>
+                      <a href="basic-car-wash.html"><span class="price-a">Offer price-450/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -226,13 +244,16 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Monthly Subscribe
-                      <br>Original Price-<strike>1450/-</strike></p>
-                    <h2 class="intro-title mb-4">
-                      <span class="color-b">Pay for 3 and get 1 free </span> + 1 Basic interial
-                      <br> Refer 2 cars and pay Rps.1000/monthly. 2 Washes absolute free!!</h2>
+                    <p class="intro-title-top">Detailing Car Wash
+                      <br>Original Price-<strike>750/-</strike></p>
+                    <h1 class="intro-title mb-4">
+                      <span class="color-b">Complete vacuuming of cars incl. seats and boot + </span> Washing and
+                      cleaning of foot mats
+                      <br> Body Shampooing and washing including door frames + Tyre arches cleaning + Underbody wash +
+                      Engine hot water wash and dressing + Side doors cleaning + Dash board cleaning and polishing +
+                      tires and alloy wheels treatment + Car perfume spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="monthly.html"><span class="price-a">Offer price-1450/only!</span></a>
+                      <a href="detailing-car-wash.html"><span class="price-a">Offer price-600/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -249,13 +270,13 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Annual Subscription<br> Original price-<strike>21600/-</strike>
-                      <br> Pay annual subscription and get 25% percentage discount</p>
+                    <p class="intro-title-top">Deep Interial Cleaning<br> Original price-<strike>1800/-</strike>
+                      <br> </p>
                     <h2 class="intro-title mb-4 ">
                       <span class="color-b">Just drive your car, We will take care of it.! </span>
-                      <br> 4 wash + 1 interial + 1 wax polish/ Month</h2>
+                      <br>Full interial cleaning + Detailing Wash + Car Roof Dry Cleaning + Car polish (Manual) Etc..</h2>
                     <p class="intro-subtitle intro-price">
-                      <a href="yearly.html"><span class="price-a">Offer price-16000/only!</span></a>
+                      <a href="deep-interial-cleaning.html"><span class="price-a">Offer price-1650/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -281,7 +302,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
@@ -298,16 +319,31 @@
                 between water car wash, eco car wash (uses the minimal amount of water), and interior car detailing.
                 And you can get all of these at reasonable rates, and without having to leave your house. Check out the
                 Car Wash Price List we’ve curated below.
+                <p>What’s the first thing that comes to your mind for “Car Wash” ? A guy washing and scrubbing your car
+                  with shampoo and a dirty rug ? NO! Exclean Car Spa does more than just washing your car and providing
+                  a
+                  shine. We focus on quality car detailing and efficiency no matter how big or small the job is. Our car
+                  wash professionals are equipped with the right tools and cleaning agents. We also offer the best
+                  doorstep car wash in Trichy. It saves you time and the hassle of having to drive your car to our
+                  garage. Just provide our car wash professionals a few litres of water then stand back and watch your
+                  car
+                  getting transformed like a shiny brand new car. Whether you own a hatchback, sedan, SUV or a luxury
+                  car,
+                  we provide the best car wash in Trichy.
+
+                  EzClean provides professional and First-Class Car wash in Trichy. So, what are you waiting for
+                  ? Book a service from the best car wash in Trichy. Get your car cleaned from EzClean -the Best
+                  Car wash near you</p>
               </p>
             </div>
-            <div class="card-footer-c">
+            <!-- <div class="card-footer-c">
               <a href="#" class="link-c link-icon">Read more
                 <span class="ion-ios-arrow-forward"></span>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
@@ -329,8 +365,8 @@
               </a>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> -->
+        <!-- <div class="col-md-4">
           <div class="card-box-c foo">
             <div class="card-header-c d-flex">
               <div class="card-box-ico">
@@ -352,7 +388,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -374,21 +410,21 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/freshwash/4-com.jpg" alt="one-time-wash" class="img-a img-fluid">
+              <img src="img/freshwash/4-com.jpg" alt="Basic-Car-Wash" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="one-time-wash.html">One time wash
+                    <a href="basic-car-wash.html">Basic Car Wash
                       <br />Door step service</a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-450/only</span>
+                    <a href="/basic-car-wash.html"><span class="price-a">Offer price-450/only</span></a>
                   </div>
-                  <a href="one-time-wash.html" class="link-a">Click here to view
+                  <a href="basic-car-wash.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -421,21 +457,21 @@
         <div class="carousel-item-b">
           <div class="card-box-a card-shadow">
             <div class="img-box-a">
-              <img src="img/freshwash/5-com.jpg" alt="Monthly-subscription" class="img-a img-fluid">
+              <img src="img/freshwash/5-com.jpg" alt="Detailing-car-wash" class="img-a img-fluid">
             </div>
             <div class="card-overlay">
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="monthly.html">Monthly subscribe
-                      <br /> pay for 3 get 1 free</a>
+                    <a href="detailing-car-wash.html">Detailing Car Wash
+                      <br /></a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-1450/only</span>
+                    <a href="/detailing-car-wash.html"><span class="price-a">Offer Price-600/only</span></a>
                   </div>
-                  <a href="monthly.html" class="link-a">Click here to view
+                  <a href="detailing-car-wash.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -460,8 +496,8 @@
                       <span> <sup>Yes</sup></span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Total wash</h4>
-                      <span> <sup>4</sup></span>
+                      <h4 class="card-info-title">ALWT</h4>
+                      <span> <sup>Yes</sup></span>
                     </li>
                   </ul>
                 </div>
@@ -478,15 +514,15 @@
               <div class="card-overlay-a-content">
                 <div class="card-header-a">
                   <h2 class="card-title-a">
-                    <a href="yearly.html">Annual Subscription
-                      <br /> 25% of total price!!</a>
+                    <a href="yearly.html">Deep Interial Cleaning
+                      <br />All service included </a>
                   </h2>
                 </div>
                 <div class="card-body-a">
                   <div class="price-box d-flex">
-                    <span class="price-a">Offer price-16000/only</span>
+                    <a href="/deep-interial-cleaning.html"><span class="price-a">Offer price-1650/only</span></a>
                   </div>
-                  <a href="yearly.html" class="link-a">Click here to view
+                  <a href="deep-interial-cleaning.html" class="link-a">Click here to view
                     <span class="ion-ios-arrow-forward"></span>
                   </a>
                 </div>
@@ -511,8 +547,8 @@
                       <span> <sup>Yes</sup></span>
                     </li>
                     <li>
-                      <h4 class="card-info-title">Total wash</h4>
-                      <span> <sup>4/P-M</sup></span>
+                      <h4 class="card-info-title">Deep</h4>
+                      <span> <sup>Yes</sup></span>
                     </li>
                   </ul>
                 </div>
@@ -604,46 +640,46 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="/about.html">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="/services.html">Services</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
+                <a href="/basic-car-wash.html">Basic Wash</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="/contact.html">Contact</a>
               </li>
             </ul>
           </nav>
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-pinterest-p" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="/">
                   <i class="fa fa-dribbble" aria-hidden="true"></i>
                 </a>
               </li>
