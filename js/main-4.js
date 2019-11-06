@@ -153,7 +153,6 @@ var maruthi = [{ id: 0, value: "Dezire" }, { id: 1, value: "swift" }, { id: 1, v
 var nissan = [{ id: 0, value: "active" }, { id: 1, value: "micro" }, { id: 1, value: "duster" }];
 var dutsun = [{ id: 0, value: "Ready go" }, { id: 1, value: "Ready go +" }, { id: 1, value: "Test" }];
 function myFunction(event) {
-	debugger
 	let options;
 	if (event.target.value === "Maruthi") {
 		options = maruthi;
@@ -232,7 +231,6 @@ function booknowButtons(mode) {
 	element.setAttribute('class', "box-collapse-open");
 }
 function carTypeChange(mode) {
-	debugger
 	let val = document.getElementById('carType').value;
 	if(!mode) mode = document.getElementById('washType').value;
 
