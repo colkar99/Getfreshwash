@@ -220,6 +220,7 @@ function loadFormValue() {
 	obj['isDoorStep'] = true;
 	obj['houseType'] = document.getElementById('houseType').value;
 	obj['orderFrom'] = params.get('orderFrom') || "organic";
+	obj['currentPrice'] = document.getElementById('dynamicPriceTag').innerHTML;
 	return obj;
 }
 loadDropdown(maruthi);
