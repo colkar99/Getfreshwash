@@ -73,8 +73,8 @@
             <div class="form-group">
               <label for="carType">Car Type</label>
               <select name="carType" class="form-control form-control-lg form-control-a" 
-              onchange="carTypeChange(event)"  id="carType" required>
-                <option value="HATCHBACK">HATCHBACK</option>
+              onchange="carTypeChange()"  id="carType" required>
+                <option selected value="HATCHBACK">HATCHBACK</option>
                 <option value="SEDAN">SEDAN</option>
                 <option value="SUV">SUV</option>
                 <option value="LUXURY">LUXURY</option>
@@ -136,7 +136,7 @@
             <div class="form-group">
               <label for="washType">Wash type</label>
               <select name="washType" class="form-control form-control-lg form-control-a"
-              onchange="carTypeChange(event)"  id="washType" required>
+              onchange="carTypeChange()"  id="washType" required>
                 <option value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
                 <option selected value="deepWash">Deep Interial Wash</option>
@@ -366,6 +366,7 @@
                   Car Detailers and we ensure to pamper each and every car with complete care and professionalism and
                   achieve your high level of satisfaction. We will become your perfect car care partner.
                 </p>
+                <button class="btn btn-warning" type="button" onclick="booknowButtons('deepWash')">Book Now</button>
                 <!-- <p class="description color-text-a no-margin">
                   Refer 2 cars and get upto 30% offer on your annual bill..! Hurry up limited period offer.
                 </p> -->

@@ -67,7 +67,7 @@
             <div class="form-group">
               <label for="carType">Car Type</label>
               <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
-                onchange="carTypeChange(event)" required>
+                onchange="carTypeChange()" required>
                 <option value="HATCHBACK">HATCHBACK</option>
                 <option value="SEDAN">SEDAN</option>
                 <option value="SUV">SUV</option>
@@ -129,8 +129,9 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" required>
-                <option value="basicWash">Basic Car Wash</option>
+              <select name="washType" class="form-control form-control-lg form-control-a"
+              onchange="carTypeChange()" id="washType" required>
+                <option selected value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
                 <option value="deepWash">Deep Interial Wash</option>
               </select>
@@ -140,7 +141,7 @@
             <div class="form-group">
               <label for="houseType">House type</label>
               <select name="houseType" class="form-control form-control-lg form-control-a" 
-              onchange="carTypeChange(event)"  id="houseType" required>
+               id="houseType" required>
                 <option value="Individual House">Individual House</option>
                 <option value="Below 2 floor apartments">2 Floor Apartments</option>
                 <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
@@ -228,7 +229,7 @@
                       Engine hot water wash and dressing + Side doors cleaning + Dash board polishing + Car perfume
                       spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="basic-car-wash.html"><span class="price-a">Offer price-450/only!</span></a>
+                      <a onclick="booknowButtons('basicWash')" style="cursor: pointer;"><span class="price-a">Offer price-450/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -254,7 +255,7 @@
                       Engine hot water wash and dressing + Side doors cleaning + Dash board cleaning and polishing +
                       tires and alloy wheels treatment + Car perfume spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="detailing-car-wash.html"><span class="price-a">Offer price-600/only!</span></a>
+                      <a onclick="booknowButtons('detailingWash')" style="cursor: pointer;"><span class="price-a">Offer price-600/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -277,7 +278,7 @@
                       <span class="color-b">Just drive your car, We will take care of it.! </span>
                       <br>Full interial cleaning + Detailing Wash + Car Roof Dry Cleaning + Car polish (Manual) Etc..</h2>
                     <p class="intro-subtitle intro-price">
-                      <a href="deep-interial-cleaning.html"><span class="price-a">Offer price-1650/only!</span></a>
+                      <a onclick="booknowButtons('deepWash')" style="cursor: pointer;"><span class="price-a">Offer price-1650/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -337,11 +338,11 @@
                   Car wash near you</p>
               </p>
             </div>
-            <!-- <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
+            <div class="card-footer-c">
+              <a href="/services.html" class="link-c link-icon">Read more
                 <span class="ion-ios-arrow-forward"></span>
               </a>
-            </div> -->
+            </div>
           </div>
         </div>
         <!-- <div class="col-md-4">

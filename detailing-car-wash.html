@@ -68,8 +68,8 @@
             <div class="form-group">
               <label for="carType">Car Type</label>
               <select name="carType" class="form-control form-control-lg form-control-a" id="carType"
-              onchange="carTypeChange(event)"  required>
-                <option value="HATCHBACK">HATCHBACK</option>
+              onchange="carTypeChange()"  required>
+                <option selected value="HATCHBACK">HATCHBACK</option>
                 <option value="SEDAN">SEDAN</option>
                 <option value="SUV">SUV</option>
                 <option value="LUXURY">LUXURY</option>
@@ -131,7 +131,7 @@
             <div class="form-group">
               <label for="washType">Wash type</label>
               <select name="washType" class="form-control form-control-lg form-control-a" 
-              onchange="carTypeChange(event)"  id="washType" required>
+              onchange="carTypeChange()"  id="washType" required>
                 <option value="basicWash">Basic Car Wash</option>
                 <option selected value="detailingWash">Detailing Car Wash</option>
                 <option value="deepWash">Deep Interial Wash</option>
@@ -339,7 +339,7 @@
                   stand back and watch your car getting transformed like a shiny brand new car. Whether you own a
                   hatchback, sedan, SUV or a luxury car, we provide the best car wash in Trichy.
                 </p>
-                <button class="btn btn-warning" type="button" onclick="booknowButtons()">Book Now</button>
+                <button class="btn btn-warning" type="button" onclick="booknowButtons('detailingWash')">Book Now</button>
                 <!-- <p class="description color-text-a no-margin">
                   Refer 2 cars and get 2 wash totally free at the cost of &#8377.1000/per month..!
                 </p> -->
