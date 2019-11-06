@@ -97,40 +97,45 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="preferDate">Select date</label>
-              <input type="date" class="form-control" id="preferDate" name="preferDate" required>
+              <input type="date" class="form-control form-control-lg form-control-a" id="preferDate" name="preferDate"
+                placeholder="Enter your prefer Date" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="preferTime">Select time</label>
               <div class="form-group">
-                <input type="time" id="preferTime" class="form-control" name="preferTime" required>
+                <input type="time" id="preferTime" class="form-control form-control-lg form-control-a" name="preferTime"
+                  placeholder="Enter your prefer Time" required>
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+              <input type="text" class="form-control form-control-lg form-control-a" id="name" name="name"
+                placeholder="Enter your Name" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="mobileNo">Contact no</label>
-              <input type="number" class="form-control" id="mobileNo" name="mobileNo" required>
+              <input type="number" class="form-control" id="mobileNo" name="mobileNo" placeholder="Enter your Mobile No"
+                required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="email">Email id</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <input type="email" class="form-control form-control-lg form-control-a" id="email" name="email"
+                placeholder="Enter your Email" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a"
-              onchange="carTypeChange()" id="washType" required>
+              <select name="washType" class="form-control form-control-lg form-control-a" onchange="carTypeChange()"
+                id="washType" required>
                 <option selected value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
                 <option value="deepWash">Deep Interial Wash</option>
@@ -140,8 +145,7 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="houseType">House type</label>
-              <select name="houseType" class="form-control form-control-lg form-control-a" 
-               id="houseType" required>
+              <select name="houseType" class="form-control form-control-lg form-control-a" id="houseType" required>
                 <option value="Individual House">Individual House</option>
                 <option value="Below 2 floor apartments">2 Floor Apartments</option>
                 <option value="Abouve 2 floor apartments">Above 2 Floor Apartments</option>
@@ -229,7 +233,8 @@
                       Engine hot water wash and dressing + Side doors cleaning + Dash board polishing + Car perfume
                       spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a onclick="booknowButtons('basicWash')" style="cursor: pointer;"><span class="price-a">Offer price-450/only!</span></a>
+                      <a onclick="booknowButtons('basicWash')" style="cursor: pointer;"><span class="price-a">Offer
+                          price-450/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -255,7 +260,8 @@
                       Engine hot water wash and dressing + Side doors cleaning + Dash board cleaning and polishing +
                       tires and alloy wheels treatment + Car perfume spray</h1>
                     <p class="intro-subtitle intro-price">
-                      <a onclick="booknowButtons('detailingWash')" style="cursor: pointer;"><span class="price-a">Offer price-600/only!</span></a>
+                      <a onclick="booknowButtons('detailingWash')" style="cursor: pointer;"><span class="price-a">Offer
+                          price-600/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -276,9 +282,11 @@
                       <br> </p>
                     <h2 class="intro-title mb-4 ">
                       <span class="color-b">Just drive your car, We will take care of it.! </span>
-                      <br>Full interial cleaning + Detailing Wash + Car Roof Dry Cleaning + Car polish (Manual) Etc..</h2>
+                      <br>Full interial cleaning + Detailing Wash + Car Roof Dry Cleaning + Car polish (Manual) Etc..
+                    </h2>
                     <p class="intro-subtitle intro-price">
-                      <a onclick="booknowButtons('deepWash')" style="cursor: pointer;"><span class="price-a">Offer price-1650/only!</span></a>
+                      <a onclick="booknowButtons('deepWash')" style="cursor: pointer;"><span class="price-a">Offer
+                          price-1650/only!</span></a>
                     </p>
                   </div>
                 </div>
@@ -633,7 +641,25 @@
     </div>
   </section>
   <!--/ Testimonials End /-->
+  <!-- model-->
+  <div id="successPage" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Your booking request was successfully submitted. Thanks for choosing us.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
   <!--/ footer Star /-->
   <footer>
     <div class="container">
@@ -724,7 +750,7 @@
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main-4.js"></script>
+  <script src="js/main-5.js"></script>
 
 </body>
 

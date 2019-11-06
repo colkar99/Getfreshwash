@@ -100,40 +100,45 @@
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="preferDate">Select date</label>
-              <input type="date" class="form-control" id="preferDate" name="preferDate" required>
+              <input type="date" class="form-control form-control-lg form-control-a" id="preferDate" name="preferDate"
+                placeholder="Enter your prefer Date" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="preferTime">Select time</label>
               <div class="form-group">
-                <input type="time" id="preferTime" class="form-control" name="preferTime" required>
+                <input type="time" id="preferTime" class="form-control form-control-lg form-control-a" name="preferTime"
+                  placeholder="Enter your prefer Time" required>
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+              <input type="text" class="form-control form-control-lg form-control-a" id="name" name="name"
+                placeholder="Enter your Name" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="mobileNo">Contact no</label>
-              <input type="number" class="form-control" id="mobileNo" name="mobileNo" required>
+              <input type="number" class="form-control" id="mobileNo" name="mobileNo" placeholder="Enter your Mobile No"
+                required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="email">Email id</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <input type="email" class="form-control form-control-lg form-control-a" id="email" name="email"
+                placeholder="Enter your Email" required>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="washType">Wash type</label>
-              <select name="washType" class="form-control form-control-lg form-control-a" id="washType" 
-              onchange="carTypeChange('basicWash')" required>
+              <select name="washType" class="form-control form-control-lg form-control-a" id="washType"
+                onchange="carTypeChange('basicWash')" required>
                 <option selected value="basicWash">Basic Car Wash</option>
                 <option value="detailingWash">Detailing Car Wash</option>
                 <option value="deepWash">Deep Interial Wash</option>
@@ -485,6 +490,25 @@
       </div>
     </div>
   </section> -->
+  <!-- model-->
+  <div id="successPage" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Your booking request was successfully submitted. Thanks for choosing us.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
   <footer>
     <div class="container">
       <div class="row">
@@ -573,7 +597,7 @@
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main-4.js"></script>
+  <script src="js/main-5.js"></script>
 
 
 </body>

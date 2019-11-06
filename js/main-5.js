@@ -167,6 +167,7 @@ function myFunction(event) {
 	loadDropdown(options)
 }
 function loadDropdown(options) {
+	debugger
 	var select = document.getElementById("carVariety");
 	select.innerHTML = null;
 	for (let option of options) {
@@ -195,11 +196,10 @@ function bookingForm(event) {
 		error: function (d) {
 			console.log(d);
 		}
-
-
 	});
 	var element = document.getElementById("body");
 	element.setAttribute('class', "box-collapse-closed");
+	$('#successPage').modal('show');
 	// element.class = "close-box-collapse right-boxed ion-ios-close";
 	// element.click();
 
@@ -232,46 +232,46 @@ function booknowButtons(mode) {
 }
 function carTypeChange(mode) {
 	let val = document.getElementById('carType').value;
-	if(!mode) mode = document.getElementById('washType').value;
+	if (!mode) mode = document.getElementById('washType').value;
 
 	let priceTag = document.getElementById('dynamicPriceTag');
 	let price = 0;
-	if(val ==="HATCHBACK" && mode === "basicWash"){
+	if (val === "HATCHBACK" && mode === "basicWash") {
 		priceTag.innerHTML = `Booking Price 400`;
 	}
-	if(val ==="HATCHBACK" && mode === "detailingWash"){
+	if (val === "HATCHBACK" && mode === "detailingWash") {
 		priceTag.innerHTML = `Booking Price 600`;
 	}
-	if(val ==="HATCHBACK" && mode === "deepWash"){
+	if (val === "HATCHBACK" && mode === "deepWash") {
 		priceTag.innerHTML = `Booking Price 1650`;
 	}
-	if(val ==="SEDAN" && mode === "basicWash"){
+	if (val === "SEDAN" && mode === "basicWash") {
 		priceTag.innerHTML = `Booking Price 450`;
 	}
-	if(val ==="SEDAN" && mode === "detailingWash"){
+	if (val === "SEDAN" && mode === "detailingWash") {
 		priceTag.innerHTML = `Booking Price 650`;
 	}
-	if(val ==="SEDAN" && mode === "deepWash"){
+	if (val === "SEDAN" && mode === "deepWash") {
 		priceTag.innerHTML = `Booking Price 1750`;
 	}
 
-	if(val ==="SUV" && mode === "basicWash"){
+	if (val === "SUV" && mode === "basicWash") {
 		priceTag.innerHTML = `Booking Price 450`;
 	}
-	if(val ==="SUV" && mode === "detailingWash"){
+	if (val === "SUV" && mode === "detailingWash") {
 		priceTag.innerHTML = `Booking Price 650`;
 	}
-	if(val ==="SUV" && mode === "deepWash"){
+	if (val === "SUV" && mode === "deepWash") {
 		priceTag.innerHTML = `Booking Price 1750`;
 	}
 
-	if(val ==="LUXURY" && mode === "basicWash"){
+	if (val === "LUXURY" && mode === "basicWash") {
 		priceTag.innerHTML = `Booking Price 800`;
 	}
-	if(val ==="LUXURY" && mode === "detailingWash"){
+	if (val === "LUXURY" && mode === "detailingWash") {
 		priceTag.innerHTML = `Booking Price 1000`;
 	}
-	if(val ==="LUXURY" && mode === "deepWash"){
+	if (val === "LUXURY" && mode === "deepWash") {
 		priceTag.innerHTML = `Booking Price 2500`;
 	}
 
